@@ -16,7 +16,7 @@ function getDatabaseType(url = process.env.DATABASE_URL) {
 const databaseType = getDatabaseType();
 
 if (!databaseType || !['mysql', 'postgresql'].includes(databaseType)) {
-  throw new Error('Missing or invalid database, Provided: ' + url);
+  throw new Error('Missing or invalid database, Provided: ' + databaseType);
 }
 
 console.log(`Database type detected: ${databaseType}`);
